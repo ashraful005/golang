@@ -20,6 +20,7 @@ fmt.Println("Hello" == "Hello")
 //variables vs constants
 var a int = 22
 const b int =22
+var name, city string = "Ashraful", "Cumilla"
 fmt.Println(a)
 fmt.Println(b)
 }
