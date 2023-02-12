@@ -1,10 +1,10 @@
 package main
+//global variable
+var name string = "Ashraful"
 
 import "fmt"
 
 func main(){
-//local variable
-var name string = "Ashraful"
 
 fmt.Println(name)
 
