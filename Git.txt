@@ -1,0 +1,15 @@
+Create new branch:
+ git branch "branch name" 
+
+Check existing branches:
+ git branch
+
+
+Check aliases name:
+ git remote
+
+
+Push to remote repo:
+ git push <alias name> <branch name>
+
+Example: git push origin main
