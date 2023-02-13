@@ -16,3 +16,6 @@ Push to remote repo:
     Example: git push origin main
 
  2. git push -u <alias name> <branch name>
+
+Check whether user is configured or not:
+  cat .git/config
