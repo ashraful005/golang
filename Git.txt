@@ -19,3 +19,9 @@ Push to remote repo:
 
 Check whether user is configured or not:
   cat .git/config
+
+Set configuration of Git:
+
+  git config user.name "give the name of Github Account"
+
+  git config user.email "give the email associated with Github"
