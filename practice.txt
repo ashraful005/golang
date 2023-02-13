@@ -1,0 +1,327 @@
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git
+$ git init
+Initialized empty Git repository in E:/Go Workspace/src/Codes/2023/Git/.git/
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git commands.txt
+        Git.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (master)
+$ git add .
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (master)
+$ git commit -m "Common git commands"
+[master (root-commit) 7a7c3aa] Common git commands
+ 2 files changed, 18 insertions(+)
+ create mode 100644 Git commands.txt
+ create mode 100644 Git.txt
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (master)
+$ git branch -M common
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git remote
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=ashraful005
+user.email=alam1809005@stud.kuet.ac.bd
+user.username=ashraful005
+color.ui=auto
+gui.recentrepo=E:/C Codes/Day-01
+gui.recentrepo=E:/C Codes/Calculator(C)
+gui.recentrepo=E:/C Codes/Fibonacci
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git push origin common
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git add remote origin https://github.com/ashraful005/golang.git
+fatal: pathspec 'remote' did not match any files
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git remote add origin https://github.com/ashraful005/golang.git
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git remote
+origin
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git push origin common
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 411 bytes | 12.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'common' on GitHub by visiting:
+remote:      https://github.com/ashraful005/golang/pull/new/common
+remote:
+To https://github.com/ashraful005/golang.git
+ * [new branch]      common -> common
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git status
+On branch common
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Git commands.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git add .
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git commit -m "Important git commands"
+[common 737eb97] Important git commands
+ 1 file changed, 48 insertions(+)
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git push origin common
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.21 KiB | 1.21 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ashraful005/golang.git
+   7a7c3aa..737eb97  common -> common
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/ashraful005/golang.git
+  Push  URL: https://github.com/ashraful005/golang.git
+  HEAD branch: main
+  Remote branches:
+    Mimport       new (next fetch will store in remotes/origin)
+    comments      new (next fetch will store in remotes/origin)
+    common        tracked
+    gobook        new (next fetch will store in remotes/origin)
+    main          new (next fetch will store in remotes/origin)
+    master        new (next fetch will store in remotes/origin)
+    simpleProgram new (next fetch will store in remotes/origin)
+  Local ref configured for 'git push':
+    common pushes to common (up to date)
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git branch
+* common
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/ashraful005/golang.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git config --global user.name "ashraful005"
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git config --global user.email "alam1809005@stud.kuet.ac.bd"
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/ashraful005/golang.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git config user.name "Md. Ashraful Alam"
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git config user.email "alam1809005@stud.kuet.ac.bd"
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/ashraful005/golang.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[user]
+        name = Md. Ashraful Alam
+        email = alam1809005@stud.kuet.ac.bd
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git status
+On branch common
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git add .
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git commit -m "check configuration of git"
+[common 8daf358] check configuration of git
+ 1 file changed, 3 insertions(+)
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git push origin common
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 381 bytes | 190.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ashraful005/golang.git
+   737eb97..8daf358  common -> common
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git config user.name "ashraful005"
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git config user.email "alam1809005@stud.kuet.ac.bd"
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/ashraful005/golang.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[user]
+        name = ashraful005
+        email = alam1809005@stud.kuet.ac.bd
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git push -u origin common
+Everything up-to-date
+Branch 'common' set up to track remote branch 'common' from 'origin'.
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git status
+On branch common
+Your branch is up to date with 'origin/common'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git add .
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git commit -m "Git configuration"
+[common 3d1dd3f] Git configuration
+ 1 file changed, 6 insertions(+)
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git push -u origin common
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 415 bytes | 415.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ashraful005/golang.git
+   8daf358..3d1dd3f  common -> common
+Branch 'common' set up to track remote branch 'common' from 'origin'.
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git status
+On branch common
+Your branch is up to date with 'origin/common'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git add .
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git commit -m "updated"
+[common 2baba35] updated
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$ git push -u origin common
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ashraful005/golang.git
+   3d1dd3f..2baba35  common -> common
+Branch 'common' set up to track remote branch 'common' from 'origin'.
+
+Ashraful@DESKTOP-T68I6RD MINGW64 /e/Go Workspace/src/Codes/2023/Git (common)
+$
