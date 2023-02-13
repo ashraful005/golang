@@ -25,3 +25,9 @@ Set configuration of Git:
   git config user.name "give the username of Github Account"
 
   git config user.email "give the email associated with Github"
+
+
+Git rebase:
+  1. git fetch origin main:tmp
+  2. git rebase tmp
+  3. git push origin main
