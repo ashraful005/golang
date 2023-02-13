@@ -22,6 +22,6 @@ Check whether user is configured or not:
 
 Set configuration of Git:
 
-  git config user.name "give the name of Github Account"
+  git config user.name "give the username of Github Account"
 
   git config user.email "give the email associated with Github"
